@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+</head>
+<body>
+    <a href="/auth/sign-in">already got an account</a>
+    <h1>Create a new account</h1>
+    <form action="/auth/sign-up" method="POST">
+        <label hidden for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="username"/>
+        <label hidden for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="password"/>
+        <label hidden for="confirmPassword">Confirm Password:</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password"/>
+        <label hidden for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="name"/>
+        <button type="submit">Sign up</button>
+
+    </form>
+</body>
+</html>
