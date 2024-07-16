@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app</title>
+</head>
+<body>
+    <%-include('../partials/_navbar.ejs')%>
+    <h1> <%= user.username %>'s Collection</h1>
+    <a href="/users/<%=user._id%>/trainers/new">add trainer</a>
+
+    <ul>
+        <% trainers.forEach(trainer => { %>
+            <li>
+                <a href="/users/<%=user._id%>/trainers/<%=trainer._id%>">
+                <%= trainer.name %>,
+                Size:<%= trainer.size %>
+                </a>
+            </li>
+            <% }) %>
+    </ul>
+</body>
+</html>

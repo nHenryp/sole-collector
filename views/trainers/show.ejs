@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= trainer.name %>
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar') %>
+        <h1>
+            <%=trainer.name %>
+        </h1>
+
+        <% if (trainer.size) { %>
+            <p>size: <%= trainer.size %>
+            </p>
+            <% } %>
+            
+           <a href="/users/<%=user._id%>/trainers/<%=trainer._id%>/edit"><button type="submit"> update <%=trainer.name%></a></button>
+                <form action="/users/<%=user._id%>/trainers/<%=trainer._id%>?_method=DELETE" method="POST">
+                    <button type="submit">delete <%=trainer.name%></button>
+                </form>
+</body>
+
+</html>

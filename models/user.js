@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+const {trainerSchema} = require('./trainer')
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -15,6 +15,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    trainers: [trainerSchema],
+        
+    
 })
 
 const User = mongoose.model('User', userSchema)
