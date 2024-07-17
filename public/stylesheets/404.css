@@ -15,4 +15,5 @@ body {
     background-position: center;
     transition: width 2s, height 2s, transform 2s;
     background-size: cover;
+    
 }

@@ -21,7 +21,9 @@ router.post('/sign-up', async (req, res) => {
     req.body.password = bcrypt.hashSync(req.body.password, 11)
 
     const user = await User.create(req.body)
-    return res.send(`Welcome to the site, ${user.username}`)
+    //return res.send(`Welcome to the site, ${user.username}`)
+    console.log(user)
+   return res.redirect('/')
 
 })
 
@@ -34,7 +36,7 @@ router.post('/sign-in', async (req, res) => {
     const userInDataBase = await User.findOne({ username: req.body.username })
     if (!userInDataBase) {
         console.log('user does not exist in database')
-        return res.send('login failed')
+        return res.redirect('auth/sign-in')
     }
 
     const validPassword = bcrypt.compareSync(req.body.password, userInDataBase.password)
