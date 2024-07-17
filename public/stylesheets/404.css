@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Permanent+Marker&display=swap');
+
+
+h1 {
+    font-family: 'Permanent Marker', 'arial', sans-serif;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+body {
+    background-image: url('../images/404.1.jpg');
+    background-position: center;
+    transition: width 2s, height 2s, transform 2s;
+    background-size: cover;
+}

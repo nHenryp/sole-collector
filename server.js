@@ -7,6 +7,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const isSignedIn = require('./middleware/is-signed-in.js')
 const passUserToView = require('./middleware/pass-user-to-view.js')
+const path = require('path')
 
 
 
@@ -23,6 +24,7 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: true }))
 app.use(morgan('dev'))
 app.use(methodOverride('_method'))
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
     resave: false,
     saveUninitialized: true,
@@ -38,11 +40,9 @@ app.use(passUserToView)
 
 
 app.get('/', async (req, res) => {
-    if (req.session.user._id) {
-       return res.redirect(`/users/${req.session.user._id}/trainers`)
-    } else {
-        res.render('index')
-    }
+   res.render('index', {
+    user: req.session.user
+   })
 
 })
 

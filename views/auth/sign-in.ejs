@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/sign-up-in.css">
     <title>Sign in</title>
 </head>
+
 <body>
-    
-   <button type="submit"><a href="/">Home</a></button>
+    <nav>
+        <button type="submit"><a href="/">Home</a></button>
+        <button type="submit"><a href="/auth/sign-up">Not a member</a></button>
+    </nav>
     <h1>sign in</h1>
-    <form action="/auth/sign-in" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username"/>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password">
-        <button type="submit">sign in</button>
-    </form>
+    <section class="form-sec">
+        <div class="signin-container">
+            <form action="/auth/sign-in" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" />
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+                <button type="submit">sign in</button>
+            </form>
+        </div>
+    </section>
 </body>
+
 </html>
