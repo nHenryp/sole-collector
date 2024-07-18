@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bcrypt = require('bcrypt')
 const User = require('../models/user.js')
-
+const users = require('../controllers/users.js')
 
 //route/controllers
 router.get('/sign-up', (req, res) => {
@@ -23,7 +23,7 @@ router.post('/sign-up', async (req, res) => {
     const user = await User.create(req.body)
     //return res.send(`Welcome to the site, ${user.username}`)
     console.log(user)
-   return res.redirect('/')
+   return res.redirect(`users/${user._id}/trainers`)
 
 })
 
@@ -49,6 +49,7 @@ router.post('/sign-in', async (req, res) => {
         username: userInDataBase.username,
         _id: userInDataBase._id
     }
+    console.log(req.session.user)
     req.session.save(() => {
         res.redirect('/')
     })

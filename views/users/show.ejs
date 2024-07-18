@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <title>User Profile</title>
+</head>
+
+<body>
+    <%-include('../partials/_profilenav.ejs')%>
+    <h1>
+        <%=user.username%> Profile
+    </h1>
+    <h2>Trainers Owned</h2>
+    <ul>
+        <% if (trainers.length> 0) { %>
+            <% trainers.forEach(trainer=> { %>
+
+                <li>
+                    <h3>
+                        <%= trainer.name %>
+                    <a href="/trainer/<%trainer.id%>"></a>        
+                    </h3><div class="trainer">
+                    <p>Size: <%= trainer.size %>
+                    </p>
+                    <p>Color: <%= trainer.color %>
+                    </p>
+                    <p>Material: <%= trainer.material %>
+                    </p>
+                    <p>Year: <%= trainer.year %>
+                    </p>
+                    <p>Type: <%= trainer.type %>
+                    </p>
+                    </div>
+                </li>
+
+                <% }) %>
+                    <% } else { %>
+                        <p>No trainers owned.</p>
+                        <% } %>
+    </ul>
+
+
+
+
+
+
+</body>
+
+</html>

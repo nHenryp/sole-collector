@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const {trainerSchema} = require('./trainer')
+const trainerSchema = require('./trainer').schema
 
 const userSchema = new mongoose.Schema({
     username: {

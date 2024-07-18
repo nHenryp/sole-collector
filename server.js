@@ -16,6 +16,7 @@ const port = process.env.PORT || 3000
 
 const authController = require('./controllers/auth.js')
 const trainerscontroller = require('./controllers/trainers.js')
+const usersController = require('./controllers/users.js')
 
 
 
@@ -50,6 +51,7 @@ app.get('/', async (req, res) => {
 
 app.use('/auth', authController)
 app.use(isSignedIn)
+app.use('/users', isSignedIn, usersController);
 
 app.use('/users/:userId/trainers', trainerscontroller)
 
