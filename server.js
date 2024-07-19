@@ -43,6 +43,7 @@ app.use(passUserToView)
 app.get('/', async (req, res) => {
    res.render('index', {
     user: req.session.user
+    
    })
 
 })

@@ -1,11 +1,15 @@
 <nav>
+    <ul>
+    
     <% if (user) {%>
-        <a href="/users/<%=user._id%>/trainers">My Trainers</a>
-        <a href="/auth/sign-out">Sign Out</a>
+      <li>  <a href="/users/<%=user._id%>/trainers">My Trainers</a> </li>
+        <li><a href="/auth/sign-out">Sign Out</a></li>
         <% } else { %>
-            <a href="/auth/sign-in">Sign In</a>
-            <a href="/auth/sign-up">Join</a>
+          <li>  <a href="/auth/sign-in">Sign In</a></li>
+           <li> <a href="/auth/sign-up">Join</a></li>
             <% } %>
+       
+    </ul>
 </nav>
 
 

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather sans', 'ariel' ;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(30deg, black, purple, transparent);
+    
+}
+h1{
+    text-align: center;
+    padding: 1rem;
+}
+.pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+p{
+    padding:1rem;
+}
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+ nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+ }
+ nav li{
+    height: 50px;
+
+ }
+ nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+ }
+ nav a:hover{
+    background-color: #473636cc;
+ }
+
+ .pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%; 
+    margin: 0 auto; 
+    padding: 1rem; 
+}
+
+.picframe {
+    padding: .4rem;
+    margin: 0; 
+    border: 10px solid black;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    border-radius: 12px;
+    box-sizing: border-box; 
+    background-image: url('/public/images/boxes.jpg');
+    z-index: 999;
+}
+ 
+
+
+
+
+ .container {
+    width: 40%;
+    margin: 20px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    bottom: 0;
+    left: 20%;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+textarea {
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+textarea:focus {
+    outline: none;
+    border-color: #a4a4a4;
+}
+button {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(0,0,0, .7);
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+ 

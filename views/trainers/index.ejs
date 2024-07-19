@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
     <title>app</title>
 </head>
 <body>
-    <%-include('../partials/_navbar.ejs')%>
+    <%-include('../partials/_profilenav.ejs')%>
     <h1> <%= user.username %>'s Collection</h1>
-    <a href="/users/<%=user._id%>/trainers/new">add trainer</a>
-
-    <ul>
+    
+<section">
+    <ul class="trainercontain">
         <% trainers.forEach(trainer => { %>
-            <li>
+          <div class="trainer"> <li>
                 <a href="/users/<%=user._id%>/trainers/<%=trainer._id%>">
                 <%= trainer.name %>,
                 Size:<%= trainer.size %>
                 </a>
-            </li>
+            </li></div> 
             <% }) %>
     </ul>
+</section>
 </body>
 </html>

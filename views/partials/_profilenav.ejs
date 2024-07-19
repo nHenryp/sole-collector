@@ -1,9 +1,13 @@
 <nav>
-    <% if (user) {%>
-        <a href="/users/<%=user_id%>/trainers/new">Add new trainer</a>
-        <a href="/users/<%=user_id%>/trainers/show">display</a>
-        <% } else { %>
-            <a href="/auth/sign-in">sign in</a>
-            <a href="/auth/sign-up">join</a>
-            <% } %>
+    <ul>
+        <% if (user) {%>
+            <li><a href="/users/<%=user._id%>/trainers">My Trainers</a> </li>
+            <li><a href="/users/<%=user._id%>/trainers/new">Add Trainer</a></li>
+            <li><a href="/auth/sign-out">Sign Out</a></li>
+            
+            <% } else { %>
+                <a href="/auth/sign-in">sign in</a>
+                <a href="/auth/sign-up">join</a>
+                <% } %>
+    </ul>
 </nav>

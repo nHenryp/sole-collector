@@ -4,23 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/show.css">
     <title>
         <%= trainer.name %>
     </title>
 </head>
 
 <body>
-    <%- include('../partials/_navbar') %>
+    <%- include('../partials/_showbar') %>
         <h1>
             <%=trainer.name %>
         </h1>
 
-        <% if (trainer.size) { %>
-            <p>size: <%= trainer.size %>
-            </p>
-            <% } %>
+        <% if (trainer.name) { %>
+            <div class="pic-container">
+                <div class="picframe">
+                    </div>
+            </div>   
+    
+             
+            <p>size: <%= trainer.size %></p>
+            <p>Color: <%=trainer.color%></p>
+            <p>Year: <%=trainer.year%></p>
+            <p>Material: <%=trainer.material%></p>
+
             
-           <a href="/users/<%=user._id%>/trainers/<%=trainer._id%>/edit"><button type="submit"> update <%=trainer.name%></a></button>
+            
+
+            
+       
+
+            <div class="container">
+                
+                <form action="/users/<%=user._id%>/trainers/<%=trainer._id%>/?_method=PUT" method="POST">
+                    <label hidden for="note">Your Note:</label>
+                    <textarea id="note" name="note" rows="10" cols="50" placeholder="Enter your note here..." required value="text"></textarea>
+                    <button type="reset">Submit</button>
+                </form>
+            </div>
+            <% } %>
+           
+          
                 <form action="/users/<%=user._id%>/trainers/<%=trainer._id%>?_method=DELETE" method="POST">
                     <button type="submit">delete <%=trainer.name%></button>
                 </form>
