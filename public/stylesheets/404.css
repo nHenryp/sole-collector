@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
+*{
+    font-family: 'Merriweather', 'arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 h1 {
-    font-family: 'Permanent Marker', 'arial', sans-serif;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -17,3 +21,29 @@ body {
     background-size: cover;
     
 }
+nav{
+    background: linear-gradient(30deg, white, transparent);
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+ nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+ }
+ nav li{
+    height: 50px;
+
+ }
+ nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+ }
+ nav a:hover{
+    background-color: #473636cc;
+ }
