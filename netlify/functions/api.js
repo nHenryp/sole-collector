@@ -5,28 +5,28 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
-const isSignedIn = require('./middleware/is-signed-in.js')
-const passUserToView = require('./middleware/pass-user-to-view.js')
-const path = require('path')
-const severless = require('serverless-http')
+const isSignedIn = require('../../middleware/is-signed-in.js')
+const passUserToView = require('../../middleware/pass-user-to-view.js')
+
+const serverless = require('serverless-http')
 
 
 
 const app = express()
 
 
-const authController = require('./controllers/auth.js')
-const trainerscontroller = require('./controllers/trainers.js')
-const usersController = require('./controllers/users.js')
+const authController = require('../../controllers/auth.js')
+const trainerscontroller = require('../../controllers/trainers.js')
+const usersController = require('../../controllers/users.js')
 
-
+mongoose.connect(process.env.MONGODB_URI)
 
 //middleware
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: true }))
 app.use(morgan('dev'))
 app.use(methodOverride('_method'))
-app.use(express.static( 'public'));
+app.use(express.static('public'));
 app.use(session({
     resave: false,
     saveUninitialized: true,
@@ -61,6 +61,6 @@ app.get('*', (req, res) => {
     return res.render('404')
 })
 
-module.exports.handler = serverless(app)
-connect()
 
+
+module.exports.handler = serverless(app)

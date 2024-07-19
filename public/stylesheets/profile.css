@@ -52,14 +52,16 @@ nav a:hover {
     text-decoration: none;
     max-width: 70vh;
     list-style: none;
+    flex-direction: wrap;
+    
 }
 
 .trainer {
     padding: .4rem;
     margin: 20px;
-    border: 10px solid black;
-    height: 150px;
-    width: 150px;
+    border: 1px solid black;
+    min-height: 200px;
+    min-width: 200px;
     text-align: center;
     border-radius: 12px;
 }
@@ -85,9 +87,6 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    
 }
 
-.gallery-item img:hover {
-    transform: scale(1.1);
-}

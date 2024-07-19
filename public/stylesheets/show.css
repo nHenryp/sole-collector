@@ -18,8 +18,10 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+   min-height: 100%;
+    min-width: 100%;
+    position:fixed;
+    padding: 1rem;
 }
 p{
     padding:1rem;
@@ -64,12 +66,13 @@ nav{
 .picframe {
     padding: .4rem;
     margin: 0; 
-    border: 10px solid black;
-    height: 300px;
+    border: 2px solid black;
+    min-height: 300px;
     width: 300px;
     text-align: center;
     border-radius: 12px;
     box-sizing: border-box; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-image: url('../public/images/boxes.jpg');
     z-index: 999;
 }
