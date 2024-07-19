@@ -7,7 +7,7 @@
 }
 body{
     min-height: 100vh;
-    background: linear-gradient(30deg, black, purple, transparent);
+    background: linear-gradient(9deg, black, rgb(212, 197, 164), transparent);
     
 }
 h1{
@@ -70,7 +70,7 @@ nav{
     text-align: center;
     border-radius: 12px;
     box-sizing: border-box; 
-    background-image: url('/public/images/boxes.jpg');
+    background-image: url('../public/images/boxes.jpg');
     z-index: 999;
 }
  

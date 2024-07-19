@@ -9,24 +9,29 @@
 </head>
 
 <body>
-    <nav>
-        <ul class="sidebar">
-            
-            <li><a href="/users/<%=user._id%>/trainers">My Trainers</a> </li>
-            <li><a href="/auth/sign-out">Sign Out</a></li>
-        </ul>
-        <ul>
-            <li><a href="/users/<%=user._id%>/trainers">My Trainers</a> </li>
-            <li><a href="/auth/sign-out">Sign Out</a></li>
-            
-        </ul>
-    </nav>
+    
+    <%-include('./partials/_navbar')%>
     <% if (user) { %>
         <h1>Welcome to SoleCollector, <%= user.username %>
         </h1>
         <% } else { %>
             <h1>Welcome to the Solecollection</h1>
             <% } %>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="" alt="Image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="" alt="Image 4">
+                </div>
+                
+            </div>
 
 
 
