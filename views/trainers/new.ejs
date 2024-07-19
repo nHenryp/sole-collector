@@ -7,9 +7,11 @@
     <title>Add a new trainer</title>
 </head>
 <body>
-    <%- include('../partials/_navbar.ejs') %>
+    <%- include('../partials/_profilenav.ejs') %>
     
     <h1>add new trainer</h1>
+     <section class="form-sec">
+    <div class="add-container"></div>
     <form action="/users/<%=user._id%>/trainers" method="POST">
 
     
@@ -32,5 +34,7 @@
     <input type="text" name="type" id="type" placeholder="Type">
     <button type="submit">Add new trainer</button>
 </form>
+</div>
+</section>
 </body>
 </html>

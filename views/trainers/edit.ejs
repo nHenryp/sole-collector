@@ -9,7 +9,7 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>edit <%=trainer.name%></h1>
-    <div class="container">
+    <div class="edit-container">
     <form action="/users/<%=user._id%>/trainers/<%=trainer._id%>/?_method=PUT" method="POST">
 
     

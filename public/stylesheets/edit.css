@@ -7,7 +7,7 @@
 }
 body{
     min-height: 100vh;
-    background-color: linear
+    background: linear-gradient(9deg, black, rgb(212, 197, 164), transparent);
 }
 h1{
     text-align: center;
@@ -41,7 +41,29 @@ nav{
     background-color: #473636cc;
  }
 
- .container{
+ .form-sec{
+    display: flex;
+    justify-content: center;
+}
+.add-container {
+    padding: 25px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 15px;
+}
+.edit-container {
+    padding: 20px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 15px;
+}
+
+form {
     display: flex;
     flex-direction: column;
- }
+    width: 200px;
+    padding: 3rem;
+    margin: 5px;
+    gap: 1rem;
+    border: 3px solid black;
+    border-radius: 20px;
+    background: linear-gradient(55deg, purple, transparent)
+}
