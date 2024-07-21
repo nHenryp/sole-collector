@@ -15,7 +15,7 @@ p {
 }
 
 body {
-    background-image: url('../images/404.1.jpg');
+    background-image: url('https://res.cloudinary.com/dcfi0p4p4/image/upload/v1721485310/404.1_q19oy0.jpg');
     background-position: center;
     transition: width 2s, height 2s, transform 2s;
     background-size: cover;
