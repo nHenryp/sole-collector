@@ -9,7 +9,7 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>edit <%=trainer.name%></h1>
-    <div class="edit-container">
+    
     <form action="/users/<%=user._id%>/trainers/<%=trainer._id%>/?_method=PUT" method="POST">
 
     
@@ -32,6 +32,6 @@
     <input type="text" name="type" id="type" required value="<%=trainer.type%>">
     <button type="submit">edit <%= trainer.name%></button>
 </form>
-</div>
+
 </body>
 </html>
